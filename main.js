@@ -1,5 +1,7 @@
 // Modules to control application life and create native browser window
 const {app, BrowserWindow, Menu} = require('electron')
+const menuTemplate = require('./src/js/menuTemplate')
+const globalShortcutFunctions = require('./src/js/globalShortcutFunctions')
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -8,11 +10,17 @@ let mainWindow
 function createWindow () {
   // Create the browser window.
   mainWindow = new BrowserWindow({width: 640, height: 390});
-  Menu.setApplicationMenu(null);
+  //Menu.setApplicationMenu(null);
   mainWindow.loadFile('index.html')
   //mainWindow.loadURL('https://youtube.com/tv#/')
   mainWindow.setAlwaysOnTop(true)
   mainWindow.setOpacity(0.9)
+  const template = menuTemplate();
+  //const menuTemplate = menuTemplate;
+  globalShortcutFunctions.loadshortcuts()
+
+  const menu = Menu.buildFromTemplate(template)
+  Menu.setApplicationMenu(menu)
 
   mainWindow.once('ready-to-show', () => {
     mainWindow.show()
