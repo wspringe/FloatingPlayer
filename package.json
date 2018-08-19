@@ -1,5 +1,5 @@
 {
-  "name": "Floating Player",
+  "name": "FloatingPlayer",
   "version": "0.0.1",
   "description": "A minimal Electron application",
   "main": "main.js",
@@ -11,10 +11,16 @@
   "repository": "",
   "keywords": [
     "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
+    "small",
+    "floating",
+    "window",
+    "video",
+    "player",
+    "multiplatform",
+    "for",
+    "Windows",
+    "MacOs",
+    "Linux"
   ],
   "author": "GitHub",
   "license": "CC0-1.0",
