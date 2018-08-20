@@ -34,9 +34,14 @@ module.exports = function() {
       label: 'Settings',
       submenu: [
         {label: 'Open Settings',
-         click () { new BrowserWindow() }
+         click () { createSettingsBrowserWindow() }
         }
       ]
     }
   ]
+}
+
+createSettingsBrowserWindow = function () {
+  let settingsWindow = new BrowserWindow({})
+  settingsWindow.loadFile('../app/src/html/SettingsPage.html')
 }

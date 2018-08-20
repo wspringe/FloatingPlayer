@@ -9,7 +9,7 @@ let mainWindow
 
 function createWindow () {
   // Create the browser window.
-  mainWindow = new BrowserWindow({width: 640, height: 390});
+  mainWindow = new BrowserWindow({width: 640, height: 390, show:false});
   //Menu.setApplicationMenu(null);
   mainWindow.loadFile('index.html')
   //mainWindow.loadURL('https://youtube.com/tv#/')
