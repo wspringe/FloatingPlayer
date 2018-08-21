@@ -2,15 +2,14 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Hello World!</title>
-    <p> 
-      <button onclick="location.href='https://youtube.com/tv#/'" type="button">YouTube</button>
-      <button onclick="location.href='https://twitch.tv/directory/'">Twitch</button>
-    </p>
+    <title>Floating Player</title>
   </head>
-  <body>
-    
-
+  <body loading>
+      <p>
+        <button onclick="location.href='https://youtube.com/tv#/'" type="button">YouTube</button>
+        <button onclick="location.href='https://twitch.tv/directory/'">Twitch</button>
+      </p>
+      <div id="root"></div>
     <script>
       // You can also require other files to run in this process
       require('./renderer.js')
