@@ -43,5 +43,5 @@ module.exports = function() {
 
 let createSettingsBrowserWindow = function () {
   let settingsWindow = new BrowserWindow({})
-  settingsWindow.loadFile('../app/src/html/SettingsPage.html')
+  settingsWindow.loadFile('./src/html/SettingsPage.html')
 }
